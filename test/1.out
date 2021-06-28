@@ -1,0 +1,28 @@
+
+Liveness Analysis Pass (LAP)
+==============================
+
+Basic block name: bb
+-----------------
+UEVAR: tmp1 tmp2 tmp4 
+KILL: tmp4 
+LIVEOUT: tmp tmp1 tmp2 tmp4 
+
+Basic block name: bb11
+-----------------
+UEVAR: tmp 
+KILL: tmp4 
+LIVEOUT: tmp2 tmp4 
+
+Basic block name: bb13
+-----------------
+UEVAR: tmp1 tmp2 
+KILL: tmp 
+LIVEOUT: tmp2 tmp4 
+
+Basic block name: bb17
+-----------------
+UEVAR: tmp2 tmp4 
+KILL: tmp 
+LIVEOUT: 
+

@@ -1,0 +1,19 @@
+digraph "CFG for 'test' function" {
+	label="CFG for 'test' function";
+
+	Node0x55efc31af080 [shape=record,label="{%0:\l  %1 = alloca i32, align 4\l  %2 = alloca i32, align 4\l  %3 = alloca i32, align 4\l  %4 = alloca i32, align 4\l  %5 = alloca i32, align 4\l  %6 = alloca i32, align 4\l  store i32 0, i32* %1, align 4\l  store i32 1, i32* %3, align 4\l  br label %7\l}"];
+	Node0x55efc31af080 -> Node0x55efc31afb30;
+	Node0x55efc31afb30 [shape=record,label="{%7:\l\l  %8 = load i32, i32* %1, align 4\l  %9 = add nsw i32 %8, 1\l  store i32 %9, i32* %3, align 4\l  %10 = load i32, i32* %3, align 4\l  %11 = load i32, i32* %2, align 4\l  %12 = mul nsw i32 %10, %11\l  store i32 %12, i32* %3, align 4\l  %13 = load i32, i32* %2, align 4\l  %14 = icmp sgt i32 %13, 9\l  br i1 %14, label %15, label %21\l|{<s0>T|<s1>F}}"];
+	Node0x55efc31afb30:s0 -> Node0x55efc31af920;
+	Node0x55efc31afb30:s1 -> Node0x55efc31affe0;
+	Node0x55efc31af920 [shape=record,label="{%15:\l\l  %16 = load i32, i32* %4, align 4\l  %17 = load i32, i32* %3, align 4\l  %18 = mul nsw i32 %16, %17\l  store i32 %18, i32* %6, align 4\l  %19 = load i32, i32* %6, align 4\l  %20 = sub nsw i32 %19, 3\l  store i32 %20, i32* %3, align 4\l  br label %26\l}"];
+	Node0x55efc31af920 -> Node0x55efc31b03a0;
+	Node0x55efc31affe0 [shape=record,label="{%21:\l\l  %22 = load i32, i32* %5, align 4\l  %23 = add nsw i32 %22, 1\l  store i32 %23, i32* %1, align 4\l  %24 = load i32, i32* %4, align 4\l  %25 = sdiv i32 %24, 2\l  store i32 %25, i32* %5, align 4\l  br label %26\l}"];
+	Node0x55efc31affe0 -> Node0x55efc31b03a0;
+	Node0x55efc31b03a0 [shape=record,label="{%26:\l\l  %27 = load i32, i32* %2, align 4\l  store i32 %27, i32* %1, align 4\l  br label %28\l}"];
+	Node0x55efc31b03a0 -> Node0x55efc31b0860;
+	Node0x55efc31b0860 [shape=record,label="{%28:\l\l  %29 = load i32, i32* %1, align 4\l  %30 = icmp slt i32 %29, 9\l  br i1 %30, label %7, label %31\l|{<s0>T|<s1>F}}"];
+	Node0x55efc31b0860:s0 -> Node0x55efc31afb30;
+	Node0x55efc31b0860:s1 -> Node0x55efc31b09e0;
+	Node0x55efc31b09e0 [shape=record,label="{%31:\l\l  %32 = load i32, i32* %1, align 4\l  %33 = add nsw i32 %32, 1\l  store i32 %33, i32* %1, align 4\l  ret void\l}"];
+}

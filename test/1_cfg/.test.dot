@@ -1,0 +1,12 @@
+digraph "CFG for 'test' function" {
+	label="CFG for 'test' function";
+
+	Node0x55b7d3bc6d90 [shape=record,label="{%0:\l  %1 = alloca i32, align 4\l  %2 = alloca i32, align 4\l  %3 = alloca i32, align 4\l  %4 = alloca i32, align 4\l  %5 = alloca i32, align 4\l  %6 = alloca i32, align 4\l  %7 = load i32, i32* %2, align 4\l  %8 = load i32, i32* %3, align 4\l  %9 = add nsw i32 %7, %8\l  store i32 %9, i32* %5, align 4\l  %10 = load i32, i32* %5, align 4\l  %11 = icmp sgt i32 %10, 0\l  br i1 %11, label %12, label %14\l|{<s0>T|<s1>F}}"];
+	Node0x55b7d3bc6d90:s0 -> Node0x55b7d3bc7630;
+	Node0x55b7d3bc6d90:s1 -> Node0x55b7d3bc79c0;
+	Node0x55b7d3bc7630 [shape=record,label="{%12:\l\l  %13 = load i32, i32* %1, align 4\l  store i32 %13, i32* %5, align 4\l  br label %18\l}"];
+	Node0x55b7d3bc7630 -> Node0x55b7d3bc7b30;
+	Node0x55b7d3bc79c0 [shape=record,label="{%14:\l\l  %15 = load i32, i32* %2, align 4\l  %16 = load i32, i32* %3, align 4\l  %17 = add nsw i32 %15, %16\l  store i32 %17, i32* %1, align 4\l  br label %18\l}"];
+	Node0x55b7d3bc79c0 -> Node0x55b7d3bc7b30;
+	Node0x55b7d3bc7b30 [shape=record,label="{%18:\l\l  %19 = load i32, i32* %5, align 4\l  %20 = load i32, i32* %3, align 4\l  %21 = add nsw i32 %19, %20\l  store i32 %21, i32* %1, align 4\l  ret void\l}"];
+}
